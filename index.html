@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./estiloPrueba.css">
+    <title>Simulador de cuotas aplicando eventos</title>
 </head>
+
 <body>
-    <h1>Carpeta de Prueba</h1>
-    <h2>Hola Mundo</h2>
-    <h3>VAMOS BOCA</h3>
-    <h4></h4>
-    <img src="../TP WIREFRAME Y ESTRUCTURA DEL PROYECTO/imagenes/fondo.jpg" alt="">
+    <form id="prestamo">
+        <div>
+            <label for="NombreYApellido">Nombre y Apellido : </label><input type="text"
+                placeholder="Ingrese Nombre y Apellido" id="usuario">
+        </div>
+        <div>
+            <label>Monto a solicitar : </label><input type="text" placeholder="$" id="monto-prestamo">
+        </div>
+        <div>
+            <label>Cantidad de cuotas : </label><select id="cuota-prestamo"></select>
+        </div>
+        <div id="valor-de-prestamo">
+            
+        </div>
+        <div>
+            <button type="button" value="Calcular" id="Boton-1">Calcular</button><input type="reset">
+        </div>
+    </form>
+    <script src="eventos.js"></script>
 </body>
+
 </html>
