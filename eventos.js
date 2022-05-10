@@ -1,20 +1,35 @@
 const cantidadDeCuotas = [3, 6, 9, 12,18,24];
 const iva = (1 * 40) / 100;
 
+usuario.addEventListener("change", () =>{
+    agregarUsuarioALocalStorage(usuario.value);
+})
+
+function agregarUsuarioALocalStorage(usuario){
+    localStorage.setItem(`usuario`, usuario)
+    console.log(localStorage.getItem(`usuario`));
+}
+
 
 let montoPrestamo = document.getElementById("monto-prestamo");
-montoPrestamo.addEventListener("change", recibirMonto ) 
-function recibirMonto(){
-    console.log(montoPrestamo.value);
+montoPrestamo.addEventListener("change", () =>{
+    agregarMontoALocalStorage(montoPrestamo.value)
+} ) 
+// function recibirMonto(){
+//     console.log(montoPrestamo.value);
+// }
+function agregarMontoALocalStorage(montoPrestamo){
+    localStorage.setItem(`monto`, montoPrestamo)
+    console.log(localStorage.getItem(`monto`));
 }
+
+
 
 let cuotaPrestamo = document.getElementById("cuota-prestamo");
 cuotaPrestamo.addEventListener("change", recibirCuota)
 function recibirCuota() {
     console.log(cuotaPrestamo.value);
 }
-
-
 
 // agregar la opccion "seleccionar" al primer select para seleccionar la cantidad de cuotas 
 let optionNula = document.createElement("option");
@@ -42,9 +57,20 @@ prestamo.addEventListener("click", calcularPrestamos);
 function calcularPrestamos(){
     let salida = (parseInt(montoPrestamo.value) * iva) + parseInt(montoPrestamo.value);
     let salida2 = salida / parseInt(cuotaPrestamo.value);
-    if(salida2 == ""){
+    if(salida2 == "" || montoPrestamo.value == "" || cuotaPrestamo.value == ""){
         alert("Datos mal ingresados");
     }else{
         confirm( "Su cuota final es de " +"$"+ Math.ceil(salida2));
     }
 }
+
+localStorage.setItem(`cantidad_de_cuotas`, cantidadDeCuotas);
+localStorage.setItem(`iva`, iva);
+
+const retornaCuotas = localStorage.getItem("cantidad_de_cuotas");
+console.log(retornaCuotas.split(","));
+
+
+const retornaIva = localStorage.getItem("iva");
+console.log(retornaIva);
+

@@ -6,25 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador de cuotas aplicando eventos</title>
+    <link rel="stylesheet" href="./css/estilo.css">
 </head>
 
 <body>
     <form id="prestamo">
-        <div>
-            <label for="NombreYApellido">Nombre y Apellido : </label><input type="text"
-                placeholder="Ingrese Nombre y Apellido" id="usuario">
-        </div>
-        <div>
-            <label>Monto a solicitar : </label><input type="text" placeholder="$" id="monto-prestamo">
-        </div>
-        <div>
-            <label>Cantidad de cuotas : </label><select id="cuota-prestamo"></select>
-        </div>
-        <div id="valor-de-prestamo">
-            
-        </div>
-        <div>
-            <button type="button" value="Calcular" id="Boton-1">Calcular</button><input type="reset">
+        <h1>Saca tu prestamo</h1>
+        <div class="centrado">
+            <div class="descripcion">
+                <label for="NombreYApellido">Nombre y Apellido : </label><input type="text"
+                    placeholder="Ingrese Nombre y Apellido" id="usuario" class="boton1">
+            </div>
+            <div class="descripcion">
+                <label>Monto a solicitar : </label><input type="text" placeholder="$" id="monto-prestamo" class="boton1">
+            </div>
+            <div class="descripcion">
+                <label>Cantidad de cuotas : </label><select id="cuota-prestamo" class="boton1" ></select>
+            </div>
+            <div id="valor-de-prestamo" class="descripcion">
+            </div>
+            <div class="descripcion2">
+                <button type="button" value="Calcular" id="Boton-1" class="boton">Calcular</button><input type="reset" class="boton">
+            </div>
         </div>
     </form>
     <script src="eventos.js"></script>
