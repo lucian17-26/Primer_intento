@@ -14,7 +14,7 @@ body {
 form {
     background-color: aquamarine;
     width: 600px;
-    height: 500px;
+    height: 530px;
     border-radius: 25px;
     position: relative;
 }
@@ -25,9 +25,13 @@ h1 {
 }
 table{
     position: absolute;
-    top: 360px;
+    top: 380px;
     right: 36%;
-    border: 4px solid gray;
+    
+}
+
+p{
+    color: red;
 }
 
 .centrado{
@@ -42,7 +46,7 @@ table{
     margin-top: 25px;
 }
 .descripcion2{
-    margin-top: 50px;
+    margin-top: 25px;
     display: flex;
     justify-content: space-around;
 }
