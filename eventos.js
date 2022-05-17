@@ -5,7 +5,7 @@ const iva = (1 * 40) / 100;
 let errorDeDatos = document.getElementById("valor-de-prestamo");
 
 // pide datos del usuario
-let usuario= document.getElementById("usuario")
+let usuario = document.getElementById("usuario")
 usuario.addEventListener("change", () => {
     agregarUsuarioALocalStorage(usuario.value);
 })
@@ -76,19 +76,13 @@ function devolverValor() {
     let salida2 = salida / parseInt(cuotaPrestamo.value);
     let salida3 = Math.ceil(salida2); //salida final de la funcion 
 
-    if(isNaN(salida3) || usuario.value === ""){
-        // Cuadro descriptivo del prestamo
-        valorCuota1.innerText = "Cuota a pagar";
-        valorCuota.innerText = " ";
-
-        capitalTotal1.innerText = "Total a pagar";
-        capitalTotal.innerHTML = " ";
-
-        interesAgregado1.innerText = "Interes agregado";
-        interesAgregado.innerText = "40% IVA ";
-
-        errorDeDatos.innerText= "COMPLETAR TODOS LOS CAMPOS"
-    }else {
+    if (isNaN(salida3) || usuario.value === "") {
+        Swal.fire({
+            icon: 'error',
+            title: 'ERROR',
+            text: 'COMPLETAR TODOS LOS CAMPOS',
+        })
+    } else {
         // Cuadro descriptivo del prestamo
         valorCuota1.innerText = "Cuota a pagar";
         valorCuota.innerText = `$ ${salida3}`;
@@ -98,8 +92,6 @@ function devolverValor() {
 
         interesAgregado1.innerText = "Interes agregado";
         interesAgregado.innerText = "40% IVA ";
-        
-        errorDeDatos.innerText= "";
     }
 };
 

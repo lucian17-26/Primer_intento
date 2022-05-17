@@ -5,10 +5,10 @@
 
 body {
     background-color: wheat;
-    height: 600px;
+    /* height: 600px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 
 form {
