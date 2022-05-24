@@ -1,0 +1,43 @@
+[
+    {
+        "empresa": "Todo Prestamo",
+        "disponible": 300000,
+        "plazoDeCuotas": 6
+    },
+    {
+        "empresa": "Rapipresta",
+        "disponible": 600000,
+        "plazoDeCuotas": 6
+    },
+    {
+        "empresa": "Credimar",
+        "disponible": 100000,
+        "plazoDeCuotas": 12
+    },
+    {
+        "empresa": "Super Prestamos",
+        "disponible": 250000,
+        "plazoDeCuotas": 12
+    },
+    {
+        "empresa": "Total Cash",
+        "disponible": 600000,
+        "plazoDeCuotas": 18
+    },
+    {
+        "empresa": "Prestamos YA!",
+        "disponible": 550000,
+        "plazoDeCuotas": 18
+    },
+    {
+        "empresa": "Prestamos del Sur",
+        "disponible": 120000,
+        "plazoDeCuotas": 24
+    },
+    {
+        "empresa": "Credi Norte",
+        "disponible": 300000,
+        "plazoDeCuotas": 24
+    }
+    
+]

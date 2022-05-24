@@ -92,6 +92,21 @@ function devolverValor() {
 
         interesAgregado1.innerText = "Interes agregado";
         interesAgregado.innerText = "40% IVA ";
+        
+        fetch("financieras.json").then((response => {
+            return response.json();
+        })).then((financieras) =>{
+            setTimeout(() => {
+                financieras.forEach((financiera) =>{
+                    let li = document.createElement("li");
+                    li.innerHTML= financiera.empresa;
+                    ul.append(li);
+                    
+                })
+            }, 2500);
+            
+            
+        })
     }
 };
 
@@ -105,3 +120,5 @@ console.log(retornaCuotas.split(","));
 
 const retornaIva = localStorage.getItem("iva");
 console.log(retornaIva);
+
+
